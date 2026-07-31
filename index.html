@@ -1406,20 +1406,31 @@ footer p {
         ☕ Warkop<span>Online</span>
     </div>
 
-    <!-- Tombol Menu HP -->
-    <button class="menu-toggle" onclick="openMenu()">
+    <!-- TOMBOL MENU ☰ -->
+    <button
+        class="menu-toggle"
+        onclick="openMenu()"
+    >
         ☰
     </button>
 
-    <!-- Navigasi -->
+    <!-- MENU NAVIGASI -->
     <nav id="mobileNav">
 
+        <!-- TOMBOL TUTUP ✕ -->
         <div class="menu-header">
-            <span>☕ Menu Warkop</span>
 
-            <button class="close-menu" onclick="closeMenu()">
+            <span>
+                ☕ Menu Warkop
+            </span>
+
+            <button
+                class="close-menu"
+                onclick="closeMenu()"
+            >
                 ✕
             </button>
+
         </div>
 
         <a href="#menu" onclick="closeMenu()">
@@ -1448,7 +1459,7 @@ footer p {
 
     </nav>
 
-    <!-- Background ketika menu terbuka -->
+    <!-- AREA GELAP DI LUAR MENU -->
     <div
         class="menu-overlay"
         id="menuOverlay"
@@ -4120,7 +4131,53 @@ function closeMenu() {
         .remove("active");
 
 }
+<script>
 
+    /* JavaScript lama kamu */
+
+    let cart = [];
+
+    function formatRupiah(number) {
+        // ...
+    }
+
+    // JavaScript lainnya...
+
+
+    /* ============================
+       MENU MOBILE
+    ============================ */
+
+    function openMenu() {
+
+        document
+            .getElementById("mobileNav")
+            .classList
+            .add("active");
+
+        document
+            .getElementById("menuOverlay")
+            .classList
+            .add("active");
+
+    }
+
+
+    function closeMenu() {
+
+        document
+            .getElementById("mobileNav")
+            .classList
+            .remove("active");
+
+        document
+            .getElementById("menuOverlay")
+            .classList
+            .remove("active");
+
+    }
+
+</script>
 </script>
 
 </body>
