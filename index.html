@@ -5,17 +5,15 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Warkop Online</title>
 
 <style>
 
-/* ============================
+/* ==================================================
    RESET
-============================ */
+================================================== */
 
 * {
     margin: 0;
@@ -24,86 +22,111 @@ content="width=device-width, initial-scale=1.0">
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 body {
     background-color: #f5efe6;
     color: #3e2723;
 }
 
 
-/* ============================
+/* ==================================================
    HEADER
-============================ */
+================================================== */
 
 header {
-    background: linear-gradient(
-        135deg,
-        #3e2723,
-        #6d4c41
-    );
-
+    background: linear-gradient(135deg, #3e2723, #6d4c41);
     color: white;
-
-    padding: 25px 8%;
-
+    padding: 20px 8%;
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     position: sticky;
-
     top: 0;
-
     z-index: 100;
-
-    box-shadow:
-        0 4px 15px
-        rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-
 
 .logo {
     font-size: 26px;
     font-weight: bold;
 }
 
-
 .logo span {
     color: #ffcc80;
 }
 
 
-nav a {
-    color: white;
+/* ==================================================
+   NAVIGASI DESKTOP
+================================================== */
 
-    text-decoration: none;
-
-    margin-left: 20px;
-
-    font-size: 14px;
-
-    transition: 0.3s;
+nav {
+    display: flex;
+    align-items: center;
 }
 
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
 
 nav a:hover {
     color: #ffcc80;
 }
 
 
+/* ==================================================
+   TOMBOL MENU MOBILE
+================================================== */
 
-/* ============================
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+
+
+/* Tombol X */
+
+.close-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+
+/* Header menu mobile */
+
+.menu-header {
+    display: none;
+}
+
+
+/* Overlay */
+
+.menu-overlay {
+    display: none;
+}
+
+
+/* ==================================================
    HERO
-============================ */
+================================================== */
 
 .hero {
-
     min-height: 400px;
 
     background:
-
     linear-gradient(
         rgba(62, 39, 35, 0.75),
         rgba(62, 39, 35, 0.75)
@@ -114,97 +137,71 @@ nav a:hover {
     );
 
     background-size: cover;
-
     background-position: center;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
-
     color: white;
 
     padding: 40px 20px;
 }
 
-
 .hero-content h1 {
-
     font-size: 48px;
-
     margin-bottom: 15px;
 }
 
-
 .hero-content p {
-
     font-size: 18px;
-
     margin-bottom: 25px;
 }
 
-
 .hero-button {
-
     display: inline-block;
-
     background-color: #ff9800;
-
     color: white;
-
     padding: 13px 28px;
-
     border-radius: 30px;
-
     text-decoration: none;
-
     font-weight: bold;
 }
 
+.hero-button:hover {
+    background-color: #ef6c00;
+}
 
 
-/* ============================
+/* ==================================================
    SECTION
-============================ */
+================================================== */
 
 section {
-
     padding: 60px 8%;
 }
 
-
 .section-title {
-
     text-align: center;
-
     margin-bottom: 40px;
 }
 
-
 .section-title h2 {
-
     font-size: 32px;
-
     margin-bottom: 10px;
 }
 
-
 .section-title p {
-
     color: #795548;
 }
 
 
-
-/* ============================
+/* ==================================================
    MENU
-============================ */
+================================================== */
 
 .menu-container {
-
     display: grid;
 
     grid-template-columns:
@@ -216,13 +213,9 @@ section {
     gap: 25px;
 }
 
-
 .menu-card {
-
     background-color: white;
-
     border-radius: 15px;
-
     overflow: hidden;
 
     box-shadow:
@@ -232,212 +225,93 @@ section {
     transition: 0.3s;
 }
 
-
 .menu-card:hover {
-
-    transform:
-        translateY(-7px);
+    transform: translateY(-7px);
 }
-
-
-.menu-image {
-
-    height: 180px;
-
-    background-size: cover;
-
-    background-position: center;
-}
-
-
-.kopi {
-
-    background-image:
-
-    url(
-    "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
-    );
-}
-
-
-.mie {
-
-    background-image:
-
-    url(
-    "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80"
-    );
-}
-
-
-.roti {
-
-    background-image:
-
-    url(
-    "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=600&q=80"
-    );
-}
-
-
-.teh {
-
-    background-image:
-
-    url(
-    "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80"
-    );
-}
-
-
-.makanan {
-
-    background-image:
-
-    url(
-    "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
-    );
-}
-
-
-.snack {
-
-    background-image:
-
-    url(
-    "https://images.unsplash.com/photo-1621939514649-280e2aa0e1f2?auto=format&fit=crop&w=600&q=80"
-    );
-}
-
-
-.minuman {
-
-    background-image:
-
-    url(
-    "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"
-    );
-}
-
 
 .menu-info {
-
     padding: 20px;
 }
 
-
 .menu-info h3 {
-
     margin-bottom: 8px;
 }
 
-
 .price {
-
     color: #e65100;
-
     font-weight: bold;
-
     font-size: 18px;
-
     margin-bottom: 15px;
 }
 
 
-
-/* ============================
-   PILIHAN VARIAN
-============================ */
+/* ==================================================
+   VARIAN
+================================================== */
 
 .variant-select {
-
     width: 100%;
-
     padding: 10px;
-
     margin-bottom: 10px;
 
-    border:
-        1px solid #ddd;
-
+    border: 1px solid #ddd;
     border-radius: 8px;
 
     background-color: white;
-
     color: #3e2723;
 
     outline: none;
 }
 
 
-
-/* ============================
+/* ==================================================
    STOK
-============================ */
+================================================== */
 
 .stock {
-
     padding: 8px;
-
     border-radius: 8px;
 
     text-align: center;
 
     font-size: 14px;
-
     font-weight: bold;
 
     margin-top: 10px;
 }
 
-
 .available {
-
     background-color: #dcedc8;
-
     color: #33691e;
 }
 
-
 .empty {
-
     background-color: #ffcdd2;
-
     color: #b71c1c;
 }
 
 
-
-/* ============================
+/* ==================================================
    BUTTON MENU
-============================ */
+================================================== */
 
 .menu-buttons {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 8px;
-
     margin-top: 15px;
 }
 
-
 .order-button {
-
     display: block;
-
     width: 100%;
 
     border: none;
-
     padding: 11px;
 
     border-radius: 8px;
 
     background-color: #6d4c41;
-
     color: white;
 
     font-weight: bold;
@@ -445,27 +319,20 @@ section {
     cursor: pointer;
 }
 
-
 .order-button:hover {
-
     background-color: #4e342e;
 }
 
-
 .cart-button {
-
     display: block;
-
     width: 100%;
 
     border: none;
-
     padding: 11px;
 
     border-radius: 8px;
 
     background-color: #ff9800;
-
     color: white;
 
     font-weight: bold;
@@ -473,36 +340,26 @@ section {
     cursor: pointer;
 }
 
-
 .cart-button:hover {
-
     background-color: #ef6c00;
 }
 
-
 .disabled-button {
-
     background-color: #bdbdbd;
-
     cursor: not-allowed;
 }
 
 
-
-/* ============================
+/* ==================================================
    KERANJANG
-============================ */
+================================================== */
 
 .cart-section {
-
     background-color: #fff8f0;
 }
 
-
 .cart-box {
-
     max-width: 800px;
-
     margin: auto;
 
     background-color: white;
@@ -516,11 +373,8 @@ section {
         rgba(0,0,0,0.1);
 }
 
-
 .cart-count {
-
     background-color: #e65100;
-
     color: white;
 
     padding: 8px 15px;
@@ -534,42 +388,28 @@ section {
     font-weight: bold;
 }
 
-
 .cart-item {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
     padding: 15px 0;
 
-    border-bottom:
-        1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
-
 .cart-item-info strong {
-
     display: block;
-
     margin-bottom: 5px;
 }
 
-
 .cart-item-info span {
-
     color: #777;
-
     font-size: 14px;
 }
 
-
 .remove-button {
-
     background-color: #ef5350;
-
     color: white;
 
     border: none;
@@ -581,57 +421,40 @@ section {
     cursor: pointer;
 }
 
-
 .empty-cart {
-
     text-align: center;
-
     padding: 25px;
-
     color: #888;
 }
 
-
 .cart-total {
-
     display: flex;
-
     justify-content: space-between;
 
     margin-top: 25px;
-
     padding-top: 20px;
 
-    border-top:
-        2px solid #6d4c41;
+    border-top: 2px solid #6d4c41;
 
     font-size: 20px;
-
     font-weight: bold;
 }
 
-
 .cart-total-price {
-
     color: #e65100;
 }
 
 
-
-/* ============================
+/* ==================================================
    FORM PEMESANAN
-============================ */
+================================================== */
 
 .order-section {
-
     background-color: #fff8f0;
 }
 
-
 .order-box {
-
     max-width: 750px;
-
     margin: auto;
 
     background-color: white;
@@ -645,15 +468,11 @@ section {
         rgba(0,0,0,0.1);
 }
 
-
 .form-group {
-
     margin-bottom: 20px;
 }
 
-
 .form-group label {
-
     display: block;
 
     font-weight: bold;
@@ -661,33 +480,25 @@ section {
     margin-bottom: 8px;
 }
 
-
 .form-group input,
 .form-group textarea {
-
     width: 100%;
 
     padding: 13px;
 
-    border:
-        1px solid #ddd;
+    border: 1px solid #ddd;
 
     border-radius: 8px;
 
     outline: none;
 }
 
-
 .form-group textarea {
-
     height: 100px;
-
     resize: none;
 }
 
-
 .whatsapp-button {
-
     width: 100%;
 
     padding: 14px;
@@ -707,20 +518,16 @@ section {
     cursor: pointer;
 }
 
-
 .whatsapp-button:hover {
-
     background-color: #128C7E;
 }
 
 
-
-/* ============================
+/* ==================================================
    NOTIFIKASI
-============================ */
+================================================== */
 
 .notification {
-
     margin-top: 25px;
 
     padding: 18px;
@@ -731,28 +538,22 @@ section {
 
     color: #33691e;
 
-    border-left:
-        5px solid #689f38;
+    border-left: 5px solid #689f38;
 
     display: none;
 }
 
 
-
-/* ============================
+/* ==================================================
    PESANAN SAYA
-============================ */
+================================================== */
 
 .my-order-section {
-
     background-color: #f5efe6;
 }
 
-
 .my-order-box {
-
     max-width: 800px;
-
     margin: auto;
 
     background-color: white;
@@ -766,11 +567,8 @@ section {
         rgba(0,0,0,0.1);
 }
 
-
 .order-status {
-
     background-color: #fff3cd;
-
     color: #856404;
 
     padding: 15px;
@@ -784,9 +582,7 @@ section {
     font-weight: bold;
 }
 
-
 .customer-info {
-
     background-color: #f9f5f0;
 
     padding: 20px;
@@ -796,35 +592,25 @@ section {
     margin-bottom: 25px;
 }
 
-
 .customer-info p {
-
     margin-bottom: 8px;
 }
 
-
 .order-list {
-
-    border-top:
-        1px solid #ddd;
+    border-top: 1px solid #ddd;
 }
 
-
 .order-item {
-
     display: flex;
 
     justify-content: space-between;
 
     padding: 15px 0;
 
-    border-bottom:
-        1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
-
 .total {
-
     display: flex;
 
     justify-content: space-between;
@@ -833,30 +619,24 @@ section {
 
     padding-top: 20px;
 
-    border-top:
-        2px solid #6d4c41;
+    border-top: 2px solid #6d4c41;
 
     font-size: 20px;
 
     font-weight: bold;
 }
 
-
 .total-price {
-
     color: #e65100;
 }
 
 
-
-/* ============================
+/* ==================================================
    TRACKING
-============================ */
+================================================== */
 
 .tracking-box {
-
     max-width: 800px;
-
     margin: auto;
 
     background-color: white;
@@ -870,9 +650,7 @@ section {
         rgba(0,0,0,0.1);
 }
 
-
 .order-number {
-
     text-align: center;
 
     background-color: #f5efe6;
@@ -884,39 +662,28 @@ section {
     margin-bottom: 35px;
 }
 
-
 .order-number strong {
-
     color: #e65100;
 }
 
-
 .timeline {
-
     position: relative;
 }
 
-
 .timeline-item {
-
     position: relative;
 
     padding:
         0 0 30px 45px;
 
-    border-left:
-        3px solid #ddd;
+    border-left: 3px solid #ddd;
 }
 
-
 .timeline-item:last-child {
-
     border-left: none;
 }
 
-
 .timeline-item::before {
-
     content: "✓";
 
     position: absolute;
@@ -926,7 +693,6 @@ section {
     top: 0;
 
     width: 26px;
-
     height: 26px;
 
     background-color: #6d4c41;
@@ -944,42 +710,30 @@ section {
     font-weight: bold;
 }
 
-
 .timeline-item.active::before {
-
     background-color: #e65100;
 }
 
-
 .timeline-item h4 {
-
     margin-bottom: 5px;
 }
 
-
 .timeline-item p {
-
     color: #777;
-
     font-size: 14px;
 }
 
 
-
-/* ============================
-   TENTANG WEBSITE
-============================ */
+/* ==================================================
+   TENTANG
+================================================== */
 
 .about-section {
-
     background-color: #fff8f0;
 }
 
-
 .about-box {
-
     max-width: 900px;
-
     margin: auto;
 
     background-color: white;
@@ -995,9 +749,7 @@ section {
     text-align: center;
 }
 
-
 .about-box h3 {
-
     font-size: 25px;
 
     margin-bottom: 20px;
@@ -1005,9 +757,7 @@ section {
     color: #6d4c41;
 }
 
-
 .about-box p {
-
     line-height: 1.8;
 
     color: #666;
@@ -1015,9 +765,7 @@ section {
     margin-bottom: 15px;
 }
 
-
 .about-features {
-
     display: grid;
 
     grid-template-columns:
@@ -1031,9 +779,7 @@ section {
     margin-top: 30px;
 }
 
-
 .feature {
-
     padding: 20px;
 
     background-color: #f5efe6;
@@ -1041,28 +787,21 @@ section {
     border-radius: 12px;
 }
 
-
 .feature h4 {
-
     margin: 10px 0;
 }
 
-
 .feature p {
-
     font-size: 14px;
-
     margin: 0;
 }
 
 
-
-/* ============================
+/* ==================================================
    FOOTER
-============================ */
+================================================== */
 
 footer {
-
     background-color: #3e2723;
 
     color: white;
@@ -1072,523 +811,86 @@ footer {
     padding: 30px 20px;
 }
 
-
 footer p {
-
     margin: 7px;
 }
 
 
-
-/* ============================
-   RESPONSIVE
-============================ */
-
-@media (max-width: 768px) {
-
-    header {
-
-        flex-direction: column;
-
-        gap: 15px;
-    }
-
-
-    nav a {
-
-        margin: 0 8px;
-    }
-
-
-    .hero-content h1 {
-
-        font-size: 35px;
-    }
-
-
-    section {
-
-        padding: 45px 5%;
-    }
-
-
-    .order-box,
-    .tracking-box,
-    .my-order-box,
-    .cart-box {
-
-        padding: 25px;
-    }
-
-
-    .order-item,
-    .cart-item {
-
-        flex-direction: column;
-
-        gap: 10px;
-
-        align-items: flex-start;
-    }
-
-}
-/* ============================
-   MENU HAMBURGER HP
-============================ */
-
-.menu-toggle {
-
-    display: none;
-
-    background: none;
-
-    border: none;
-
-    color: white;
-
-    font-size: 30px;
-
-    cursor: pointer;
-
-    padding: 5px;
-
-}
-
-
-.close-menu {
-
-    background: none;
-
-    border: none;
-
-    color: white;
-
-    font-size: 25px;
-
-    cursor: pointer;
-
-}
-
-
-.menu-header {
-
-    display: none;
-}
-
-
-.menu-overlay {
-
-    display: none;
-
-}
-
-
-
-/* ============================
+/* ==================================================
    RESPONSIVE MOBILE
-============================ */
+================================================== */
 
 @media (max-width: 768px) {
 
     header {
-
         flex-direction: row;
-
         justify-content: space-between;
-
         align-items: center;
 
         padding: 18px 5%;
-
     }
-
 
     .logo {
-
         font-size: 21px;
-
-        z-index: 1002;
-
     }
 
 
-    /* TOMBOL HAMBURGER */
+    /* TOMBOL ⋮ */
 
     .menu-toggle {
-
         display: block;
-
-        z-index: 1002;
-
     }
 
 
-    /* MENU SLIDE DARI KANAN */
+    /* MENU MOBILE */
 
     nav {
-
         position: fixed;
 
         top: 0;
-
-        right: -280px;
-
-        width: 280px;
-
-        height: 100vh;
-
-        background:
-
-        linear-gradient(
-            180deg,
-            #3e2723,
-            #6d4c41
-        );
-
-        display: flex;
-
-        flex-direction: column;
-
-        padding: 25px;
-
-        gap: 5px;
-
-        z-index: 1001;
-
-        box-shadow:
-        -5px 0 20px
-        rgba(0,0,0,0.3);
-
-        transition:
-        right 0.4s ease;
-
-    }
-
-
-    /* MENU SAAT DIBUKA */
-
-    nav.active {
-
-        right: 0;
-
-    }
-
-
-    /* JUDUL MENU */
-
-    .menu-header {
-
-        display: flex;
-
-        justify-content: space-between;
-
-        align-items: center;
-
-        color: white;
-
-        font-size: 18px;
-
-        font-weight: bold;
-
-        padding-bottom: 20px;
-
-        margin-bottom: 10px;
-
-        border-bottom:
-        1px solid
-        rgba(255,255,255,0.2);
-
-    }
-
-
-    /* LINK MENU */
-
-    nav a {
-
-        color: white;
-
-        text-decoration: none;
-
-        margin: 0;
-
-        padding: 15px;
-
-        border-radius: 10px;
-
-        font-size: 16px;
-
-        transition:
-        background 0.3s,
-        padding-left 0.3s;
-
-    }
-
-
-    nav a:hover {
-
-        background:
-        rgba(255,255,255,0.12);
-
-        padding-left: 22px;
-
-        color: #ffcc80;
-
-    }
-
-
-    /* BACKGROUND GELAP */
-
-    .menu-overlay {
-
-        position: fixed;
-
-        top: 0;
-
-        left: 0;
-
-        width: 100%;
-
-        height: 100vh;
-
-        background:
-        rgba(0,0,0,0.5);
-
-        z-index: 1000;
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        display: block;
-
-        transition:
-        opacity 0.4s ease;
-
-    }
-
-
-    /* OVERLAY SAAT MENU TERBUKA */
-
-    .menu-overlay.active {
-
-        opacity: 1;
-
-        visibility: visible;
-
-    }
-
-
-    /* HERO */
-
-    .hero-content h1 {
-
-        font-size: 32px;
-
-    }
-
-
-    .hero-content p {
-
-        font-size: 16px;
-
-    }
-
-}
-   /* =========================================
-   MENU TARIK MOBILE - VERSI FINAL
-========================================= */
-
-
-/* =========================================
-   TOMBOL MENU ☰
-========================================= */
-
-.menu-toggle {
-
-    display: none;
-
-    background: none;
-
-    border: none;
-
-    color: white;
-
-    font-size: 28px;
-
-    cursor: pointer;
-
-    padding: 5px;
-
-}
-
-
-/* =========================================
-   TOMBOL CLOSE ✕
-========================================= */
-
-.close-menu {
-
-    background: none;
-
-    border: none;
-
-    color: white;
-
-    font-size: 25px;
-
-    cursor: pointer;
-
-    padding: 5px 10px;
-
-}
-
-
-/* =========================================
-   HEADER MENU
-========================================= */
-
-.menu-header {
-
-    display: none;
-
-}
-
-
-/* =========================================
-   OVERLAY
-========================================= */
-
-.menu-overlay {
-
-    display: none;
-
-}
-
-
-/* =========================================
-   RESPONSIVE HP
-========================================= */
-
-@media (max-width: 768px) {
-
-
-    /* -------------------------------------
-       HEADER HP
-    ------------------------------------- */
-
-    header {
-
-        flex-direction: row;
-
-        justify-content: space-between;
-
-        align-items: center;
-
-        padding: 18px 5%;
-
-    }
-
-
-    /* -------------------------------------
-       LOGO
-    ------------------------------------- */
-
-    .logo {
-
-        font-size: 21px;
-
-    }
-
-
-    /* -------------------------------------
-       TOMBOL ☰
-    ------------------------------------- */
-
-    .menu-toggle {
-
-        display: block;
-
-        position: relative;
-
-        z-index: 2000;
-
-    }
-
-
-    /* -------------------------------------
-       MENU SLIDE DARI KANAN
-    ------------------------------------- */
-
-    header nav#mobileNav {
-
-        position: fixed;
-
-        top: 70px;
-
         right: -300px;
 
         width: 280px;
-
-        height: calc(100vh - 70px);
+        height: 100vh;
 
         background:
-
         linear-gradient(
-
             180deg,
-
             #3e2723,
-
             #6d4c41
-
         );
 
         display: flex;
 
         flex-direction: column;
 
-        padding: 20px;
+        align-items: stretch;
+
+        padding: 25px;
 
         gap: 5px;
 
         z-index: 3000;
 
-        transition:
-
-        right 0.4s ease;
-
-        margin: 0;
-
         box-shadow:
+            -5px 0 20px
+            rgba(0,0,0,0.3);
 
-        -5px 0 20px
-
-        rgba(0,0,0,0.3);
-
-        border-radius:
-
-        0 0 0 15px;
-
+        transition:
+            right 0.4s ease;
     }
 
 
-    /* -------------------------------------
-       MENU TERBUKA
-    ------------------------------------- */
+    /* MENU AKTIF */
 
-    header nav#mobileNav.active {
-
+    nav.active {
         right: 0;
-
     }
 
 
-    /* -------------------------------------
-       BAGIAN ATAS MENU
-    ------------------------------------- */
+    /* HEADER MENU */
 
-    header nav#mobileNav .menu-header {
-
+    .menu-header {
         display: flex;
 
         justify-content: space-between;
@@ -1606,45 +908,14 @@ footer p {
         margin-bottom: 10px;
 
         border-bottom:
-
-        1px solid
-
-        rgba(255,255,255,0.2);
-
+            1px solid
+            rgba(255,255,255,0.2);
     }
 
 
-    /* -------------------------------------
-       TOMBOL ✕ DI DALAM MENU
-    ------------------------------------- */
+    /* LINK MENU */
 
-    header nav#mobileNav .close-menu {
-
-        background: none;
-
-        border: none;
-
-        color: white;
-
-        font-size: 25px;
-
-        cursor: pointer;
-
-        padding:
-
-        5px 10px;
-
-        margin-left: 20px;
-
-    }
-
-
-    /* -------------------------------------
-       LINK MENU
-    ------------------------------------- */
-
-    header nav#mobileNav a {
-
+    nav a {
         display: block;
 
         color: white;
@@ -1660,52 +931,35 @@ footer p {
         font-size: 16px;
 
         transition:
-
-        background 0.3s,
-
-        padding-left 0.3s;
-
+            background 0.3s,
+            padding-left 0.3s;
     }
 
-
-    /* -------------------------------------
-       EFEK HOVER MENU
-    ------------------------------------- */
-
-    header nav#mobileNav a:hover {
-
+    nav a:hover {
         background:
-
-        rgba(255,255,255,0.12);
+            rgba(255,255,255,0.12);
 
         padding-left: 22px;
 
         color: #ffcc80;
-
     }
 
 
-    /* -------------------------------------
-       OVERLAY GELAP
-    ------------------------------------- */
+    /* OVERLAY */
 
     .menu-overlay {
-
         display: block;
 
         position: fixed;
 
         top: 0;
-
         left: 0;
 
         width: 100%;
-
         height: 100vh;
 
         background:
-
-        rgba(0,0,0,0.5);
+            rgba(0,0,0,0.5);
 
         z-index: 2500;
 
@@ -1714,1678 +968,1545 @@ footer p {
         visibility: hidden;
 
         transition:
-
-        opacity 0.4s ease;
-
+            opacity 0.4s ease,
+            visibility 0.4s ease;
     }
 
 
-    /* -------------------------------------
-       OVERLAY AKTIF
-    ------------------------------------- */
+    /* OVERLAY AKTIF */
 
     .menu-overlay.active {
-
         opacity: 1;
 
         visibility: visible;
-
     }
 
 
-    /* -------------------------------------
-       HERO HP
-    ------------------------------------- */
+    /* HERO */
 
     .hero-content h1 {
-
         font-size: 32px;
-
     }
-
 
     .hero-content p {
-
         font-size: 16px;
-
     }
 
 
-    /* -------------------------------------
-       SECTION HP
-    ------------------------------------- */
+    /* SECTION */
 
     section {
-
-        padding:
-
-        45px 5%;
-
+        padding: 45px 5%;
     }
 
 
-    /* -------------------------------------
-       BOX HP
-    ------------------------------------- */
+    /* BOX */
 
     .order-box,
-
     .tracking-box,
-
     .my-order-box,
-
     .cart-box {
-
         padding: 25px;
-
     }
 
 
-    /* -------------------------------------
-       ITEM HP
-    ------------------------------------- */
+    /* ITEM */
 
     .order-item,
-
     .cart-item {
-
         flex-direction: column;
 
         gap: 10px;
 
         align-items: flex-start;
-
     }
 
 }
+
 </style>
 
 </head>
 
 <body>
+
+<!-- ==================================================
+     HEADER
+================================================== -->
+
 <header>
 
-    <!-- LOGO -->
-    <div class="logo">
-        ☕ Warkop<span>Online</span>
+```
+<div class="logo">
+    ☕ Warkop<span>Online</span>
+</div>
+
+
+<!-- TOMBOL TITIK TIGA -->
+
+<button
+    class="menu-toggle"
+    id="menuToggle"
+    type="button"
+    aria-label="Buka Menu"
+    aria-expanded="false"
+>
+    ⋮
+</button>
+
+
+<!-- NAVIGASI -->
+
+<nav id="mobileNav">
+
+    <div class="menu-header">
+
+        <span>
+            ☕ Menu Warkop
+        </span>
+
+        <button
+            class="close-menu"
+            id="closeMenu"
+            type="button"
+            aria-label="Tutup Menu"
+        >
+            ✕
+        </button>
+
     </div>
 
 
-    <!-- TOMBOL ☰ -->
-    <button
-        class="menu-toggle"
-        onclick="openMenu()"
-        aria-label="Buka Menu"
-    >
-        ☰
-    </button>
+    <a href="#menu">
+        ☕ Daftar Menu
+    </a>
+
+    <a href="#keranjang">
+        🛒 Keranjang
+    </a>
+
+    <a href="#pesanan">
+        🛍️ Pemesanan
+    </a>
+
+    <a href="#my-order">
+        📋 Pesanan Saya
+    </a>
+
+    <a href="#tracking">
+        🚚 Tracking
+    </a>
+
+    <a href="#tentang">
+        ℹ️ Tentang
+    </a>
+
+</nav>
 
 
-    <!-- NAVIGASI -->
-    <nav id="mobileNav">
+<!-- OVERLAY -->
 
-        <!-- JUDUL MENU DAN TOMBOL ✕ -->
-        <div class="menu-header">
-
-            <span>
-                ☕ Menu Warkop
-            </span>
-
-            <button
-                class="close-menu"
-                onclick="closeMenu()"
-                aria-label="Tutup Menu"
-            >
-                ✕
-            </button>
-
-        </div>
-
-
-        <!-- LINK MENU -->
-
-        <a
-            href="#menu"
-            onclick="closeMenu()"
-        >
-            ☕ Daftar Menu
-        </a>
-
-
-        <a
-            href="#keranjang"
-            onclick="closeMenu()"
-        >
-            🛒 Keranjang
-        </a>
-
-
-        <a
-            href="#pesanan"
-            onclick="closeMenu()"
-        >
-            🛍️ Pemesanan
-        </a>
-
-
-        <a
-            href="#my-order"
-            onclick="closeMenu()"
-        >
-            📋 Pesanan Saya
-        </a>
-
-
-        <a
-            href="#tracking"
-            onclick="closeMenu()"
-        >
-            🚚 Tracking
-        </a>
-
-
-        <a
-            href="#tentang"
-            onclick="closeMenu()"
-        >
-            ℹ️ Tentang
-        </a>
-
-    </nav>
-
-
-    <!-- BACKGROUND GELAP -->
-    <div
-        class="menu-overlay"
-        id="menuOverlay"
-        onclick="closeMenu()"
-    ></div>
+<div
+    class="menu-overlay"
+    id="menuOverlay"
+></div>
+```
 
 </header>
 
-<!-- ============================
+<!-- ==================================================
      HERO
-============================ -->
+================================================== -->
 
 <div class="hero">
 
+```
 <div class="hero-content">
 
-<h1>
-Selamat Datang di Warkop Online
-</h1>
+    <h1>
+        Selamat Datang di Warkop Online
+    </h1>
 
-<p>
-Pesan makanan dan minuman favoritmu
-dengan mudah dan cepat.
-</p>
+    <p>
+        Pesan makanan dan minuman favoritmu
+        dengan mudah dan cepat.
+    </p>
 
-<a
-href="#menu"
-class="hero-button"
+    <a
+        href="#menu"
+        class="hero-button"
+    >
+        Lihat Menu
+    </a>
 
->
-
-Lihat Menu
-
-</a>
+</div>
+```
 
 </div>
 
-</div>
-
-<!-- ============================
+<!-- ==================================================
      DAFTAR MENU
-============================ -->
+================================================== -->
 
 <section id="menu">
 
+```
 <div class="section-title">
 
-<h2>
-☕ Daftar Barang
-</h2>
+    <h2>
+        ☕ Daftar Barang
+    </h2>
 
-<p>
-Pilih makanan dan minuman favorit kamu
-</p>
+    <p>
+        Pilih makanan dan minuman favorit kamu
+    </p>
 
 </div>
+
 
 <div class="menu-container">
 
-<!-- KOPI HITAM -->
 
-<div class="menu-card">
-<img 
-    src="./kopi hitam.jpeg" 
-    alt="Kopi Hitam"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Kopi Hitam
-    </h3>
-
-    <p class="price">
-    Rp5.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 10
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Kopi Hitam',
-        5000,
-        10
-        )"
-        >
-        🛍️ Pesan Sekarang
-        </button>
-
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Kopi Hitam',
-        5000,
-        10
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-<!-- CAPPUCINO -->
-
-<div class="menu-card">
-
-<img 
-    src="./capucino.jpeg" 
-    alt="Cappuccino"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Cappuccino
-    </h3>
-
-    <p class="price">
-    Rp8.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 8
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Cappuccino',
-        8000,
-        8
-        )"
-        >
-        🛍️ Pesan Sekarang
-        </button>
-
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Cappuccino',
-        8000,
-        8
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-
-<!-- SUSU JAHE -->
-
-<div class="menu-card">
-
-<img 
-    src="./jahe.jpeg" 
-    alt="Susu Jahe"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Susu Jahe
-    </h3>
-
-    <p class="price">
-    Rp5.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 12
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Susu Jahe',
-        5000,
-        12
-        )"
-        >
-        🛍️ Pesan Sekarang
-        </button>
-
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Susu Jahe',
-        5000,
-        12
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-<!-- TEH HANGAT / ES TEH -->
-
-<div class="menu-card">
-
-<img 
-    src="./teh.jpeg" 
-    alt="Teh Hangat / Es Teh"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Teh Hangat / Es Teh
-    </h3>
-
-    <p class="price">
-    Rp5.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 15
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Teh Hangat / Es Teh',
-        5000,
-        15
-        )"
-        >
-        🛍️ Pesan Sekarang
-        </button>
-
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Teh Hangat / Es Teh',
-        5000,
-        15
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-
-<!-- POP ICE -->
-
-<div class="menu-card">
-
-<img 
-    src="./pop ice.jpeg" 
-    alt="Pop Ice"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Pop Ice
-    </h3>
-
-    <p class="price">
-    Rp4.000
-    </p>
-
-    <select
-    id="popIceFlavor"
-    class="variant-select"
-    >
-
-        <option value="Cokelat">
-        Cokelat
-        </option>
-
-        <option value="Taro">
-        Taro
-        </option>
-
-        <option value="Stroberi">
-        Stroberi
-        </option>
-
-        <option value="Melon">
-        Melon
-        </option>
-
-        <option value="Permen Karet">
-        Permen Karet
-        </option>
-
-    </select>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 10
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanPopIce()"
-        >
-        🛍️ Pesan Sekarang
-        </button>
-
-        <button
-        class="cart-button"
-        onclick="addPopIce()"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-<!-- JERUK HANGAT / ES JERUK -->
-
-<div class="menu-card">
-
-<img 
-    src="./jeruk.jpeg" 
-    alt="Jeruk Hangat / Es Jeruk"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Jeruk Hangat / Es Jeruk
-    </h3>
-
-    <p class="price">
-    Rp7.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 10
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Jeruk Hangat / Es Jeruk',
-        7000,
-        10
-        )"
-        >
-        🛍️ Pesan Sekarang
-        </button>
-
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Jeruk Hangat / Es Jeruk',
-        7000,
-        10
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-<!-- AIR MINERAL -->
-
-<div class="menu-card">
-
-<img 
-    src="./air.jpeg" 
-    alt="Air Mineral"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Air Mineral
-    </h3>
-
-    <p class="price">
-    Rp4.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 10
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Air Mineral',
-        4000,
-        10
-        )"
-        >
-        🛍️ Pesan Sekarang
-        </button>
-
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Air Mineral',
-        4000,
-        10
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-
-<!-- NASI AYAM GEPREK -->
-
-<div class="menu-card">
-
-<img 
-    src="./geprek.jpeg" 
-    alt="Nasi Ayam Geprek"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Nasi Ayam Geprek
-    </h3>
-
-    <p class="price">
-    Rp15.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 12
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Nasi Ayam Geprek',
-        15000,
-        12
-        )"
-        >
-        🛍️ Pesan Sekarang
-        </button>
-
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Nasi Ayam Geprek',
-        15000,
-        12
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-
-<!-- NASI TELUR -->
-
-<div class="menu-card">
-
-<img 
-    src="./telur.jpeg" 
-    alt="Nasi Telur"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Nasi Telur
-    </h3>
-
-    <p class="price">
-    Rp13.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 10
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Nasi Telur',
-        13000,
-        10
-        )"
-        >
-        🛍️ Pesan Sekarang
-        </button>
-
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Nasi Telur',
-        13000,
-        10
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
-
-    </div>
-
-</div>
-
-</div>
-
-<!-- SUSU PUTIH / COKELAT -->
-
-<div class="menu-card">
-
-    <img
-        src="susu.jpeg"
-        alt="Susu Putih dan Cokelat"
-        style="
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-        "
-    >
-
-    <div class="menu-info">
-
-        <h3>
-            Susu Putih / Cokelat
-        </h3>
-
-        <p class="price">
-            Rp8.000
-        </p>
-
-        <!-- PILIHAN VARIAN -->
-
-        <select
-            id="susuFlavor"
-            class="variant-select"
-            disabled
+    <!-- KOPI HITAM -->
+
+    <div class="menu-card">
+
+        <img
+            src="./kopi hitam.jpeg"
+            alt="Kopi Hitam"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
         >
 
-            <option value="Susu Putih">
-                Susu Putih
-            </option>
+        <div class="menu-info">
 
-            <option value="Susu Cokelat">
-                Susu Cokelat
-            </option>
+            <h3>
+                Kopi Hitam
+            </h3>
 
-        </select>
+            <p class="price">
+                Rp5.000
+            </p>
 
-        <!-- STOK HABIS -->
+            <div class="stock available">
+                ✓ Tersedia — Stok: 10
+            </div>
 
-        <div class="stock empty">
-            ✕ Stok Habis
-        </div>
+            <div class="menu-buttons">
 
-        <!-- BUTTON -->
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Kopi Hitam',5000,10)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
 
-        <div class="menu-buttons">
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Kopi Hitam',5000,10)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
 
-            <button
-                class="order-button disabled-button"
-                disabled
-            >
-                🛍️ Pesan Sekarang
-            </button>
-
-            <button
-                class="cart-button disabled-button"
-                disabled
-            >
-                🛒 Tambah ke Keranjang
-            </button>
+            </div>
 
         </div>
 
     </div>
 
-</div>
 
+    <!-- CAPPUCCINO -->
 
-<!-- MIE GORENG -->
+    <div class="menu-card">
 
-<div class="menu-card">
-
-<img 
-    src="./mie goreng.jpeg" 
-    alt="Mie Goreng"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Mie Goreng
-    </h3>
-
-    <p class="price">
-    Rp8.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 10
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Mie Goreng',
-        8000,
-        10
-        )"
+        <img
+            src="./capucino.jpeg"
+            alt="Cappuccino"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
         >
-        🛍️ Pesan Sekarang
-        </button>
 
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Mie Goreng',
-        8000,
-        10
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
+        <div class="menu-info">
+
+            <h3>
+                Cappuccino
+            </h3>
+
+            <p class="price">
+                Rp8.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 8
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Cappuccino',8000,8)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Cappuccino',8000,8)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
 
-</div>
+    <!-- SUSU JAHE -->
 
+    <div class="menu-card">
 
-<!-- MIE SOTO -->
-
-<div class="menu-card">
-
-<img 
-    src="./mie soto.jpeg" 
-    alt="Mie Soto"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Mie Soto
-    </h3>
-
-    <p class="price">
-    Rp8.000 / pcs
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 20
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Mie Soto',
-        8000,
-        20
-        )"
+        <img
+            src="./jahe.jpeg"
+            alt="Susu Jahe"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
         >
-        🛍️ Pesan Sekarang
-        </button>
 
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Mie Soto',
-        8000,
-        20
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
+        <div class="menu-info">
+
+            <h3>
+                Susu Jahe
+            </h3>
+
+            <p class="price">
+                Rp5.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 12
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Susu Jahe',5000,12)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Susu Jahe',5000,12)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
 
-</div>
+    <!-- TEH -->
 
-<!-- GORENGAN -->
+    <div class="menu-card">
 
-<div class="menu-card">
-
-<img 
-    src="./gorengan.jpeg" 
-    alt="Gorengan"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
-
-<div class="menu-info">
-
-    <h3>
-    Gorengan
-    </h3>
-
-    <p class="price">
-    Rp2.000
-    </p>
-
-    <div class="stock available">
-    ✓ Tersedia — Stok: 15
-    </div>
-
-    <div class="menu-buttons">
-
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Gorengan',
-        2000,
-        15
-        )"
+        <img
+            src="./teh.jpeg"
+            alt="Teh Hangat / Es Teh"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
         >
-        🛍️ Pesan Sekarang
-        </button>
 
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Gorengan',
-        2000,
-        15
-        )"
-        >
-        🛒 Tambah ke Keranjang
-        </button>
+        <div class="menu-info">
+
+            <h3>
+                Teh Hangat / Es Teh
+            </h3>
+
+            <p class="price">
+                Rp5.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 15
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Teh Hangat / Es Teh',5000,15)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Teh Hangat / Es Teh',5000,15)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
 
-</div>
+    <!-- POP ICE -->
 
+    <div class="menu-card">
 
-<!-- SNACK -->
+        <img
+            src="./pop ice.jpeg"
+            alt="Pop Ice"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
+        >
 
-<div class="menu-card">
+        <div class="menu-info">
 
-<img 
-    src="./snack.jpeg" 
-    alt="Snack"
-    style="
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        display: block;
-    "
->
+            <h3>
+                Pop Ice
+            </h3>
 
-<div class="menu-info">
+            <p class="price">
+                Rp7.000
+            </p>
 
-    <h3>
-    Snack
-    </h3>
+            <select
+                id="popIceFlavor"
+                class="variant-select"
+            >
 
-    <p class="price">
-    Rp2.000
-    </p>
+                <option value="Cokelat">
+                    Cokelat
+                </option>
 
-    <div class="stock available">
-    ✓ Tersedia — Stok: 8
+                <option value="Taro">
+                    Taro
+                </option>
+
+                <option value="Stroberi">
+                    Stroberi
+                </option>
+
+                <option value="Melon">
+                    Melon
+                </option>
+
+                <option value="Permen Karet">
+                    Permen Karet
+                </option>
+
+            </select>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 10
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanPopIce()"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addPopIce()"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="menu-buttons">
 
-        <button
-        class="order-button"
-        onclick="pesanSekarang(
-        'Snack',
-        2000,
-        8
-        )"
-        >
-        🛍️ Pesan Sekarang
-        </button>
+    <!-- JERUK -->
 
-        <button
-        class="cart-button"
-        onclick="addToCart(
-        'Snack',
-        2000,
-        8
-        )"
+    <div class="menu-card">
+
+        <img
+            src="./jeruk.jpeg"
+            alt="Jeruk Hangat / Es Jeruk"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
         >
-        🛒 Tambah ke Keranjang
-        </button>
+
+        <div class="menu-info">
+
+            <h3>
+                Jeruk Hangat / Es Jeruk
+            </h3>
+
+            <p class="price">
+                Rp7.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 10
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Jeruk Hangat / Es Jeruk',7000,10)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Jeruk Hangat / Es Jeruk',7000,10)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
 
-</div>
+
+    <!-- AIR MINERAL -->
+
+    <div class="menu-card">
+
+        <img
+            src="./air.jpeg"
+            alt="Air Mineral"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
+        >
+
+        <div class="menu-info">
+
+            <h3>
+                Air Mineral
+            </h3>
+
+            <p class="price">
+                Rp4.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 10
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Air Mineral',4000,10)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Air Mineral',4000,10)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NASI AYAM GEPREK -->
+
+    <div class="menu-card">
+
+        <img
+            src="./geprek.jpeg"
+            alt="Nasi Ayam Geprek"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
+        >
+
+        <div class="menu-info">
+
+            <h3>
+                Nasi Ayam Geprek
+            </h3>
+
+            <p class="price">
+                Rp15.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 12
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Nasi Ayam Geprek',15000,12)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Nasi Ayam Geprek',15000,12)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NASI TELUR -->
+
+    <div class="menu-card">
+
+        <img
+            src="./telur.jpeg"
+            alt="Nasi Telur"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
+        >
+
+        <div class="menu-info">
+
+            <h3>
+                Nasi Telur
+            </h3>
+
+            <p class="price">
+                Rp13.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 10
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Nasi Telur',13000,10)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Nasi Telur',13000,10)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUSU HABIS -->
+
+    <div class="menu-card">
+
+        <img
+            src="./susu.jpeg"
+            alt="Susu Putih dan Cokelat"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
+        >
+
+        <div class="menu-info">
+
+            <h3>
+                Susu Putih / Cokelat
+            </h3>
+
+            <p class="price">
+                Rp8.000
+            </p>
+
+            <select
+                class="variant-select"
+                disabled
+            >
+
+                <option>
+                    Susu Putih
+                </option>
+
+                <option>
+                    Susu Cokelat
+                </option>
+
+            </select>
+
+            <div class="stock empty">
+                ✕ Stok Habis
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button disabled-button"
+                    disabled
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button disabled-button"
+                    disabled
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MIE GORENG -->
+
+    <div class="menu-card">
+
+        <img
+            src="./mie goreng.jpeg"
+            alt="Mie Goreng"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
+        >
+
+        <div class="menu-info">
+
+            <h3>
+                Mie Goreng
+            </h3>
+
+            <p class="price">
+                Rp8.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 10
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Mie Goreng',8000,10)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Mie Goreng',8000,10)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MIE SOTO -->
+
+    <div class="menu-card">
+
+        <img
+            src="./mie soto.jpeg"
+            alt="Mie Soto"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
+        >
+
+        <div class="menu-info">
+
+            <h3>
+                Mie Soto
+            </h3>
+
+            <p class="price">
+                Rp8.000 / pcs
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 20
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Mie Soto',8000,20)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Mie Soto',8000,20)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- GORENGAN -->
+
+    <div class="menu-card">
+
+        <img
+            src="./gorengan.jpeg"
+            alt="Gorengan"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
+        >
+
+        <div class="menu-info">
+
+            <h3>
+                Gorengan
+            </h3>
+
+            <p class="price">
+                Rp2.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 15
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Gorengan',2000,15)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Gorengan',2000,15)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SNACK -->
+
+    <div class="menu-card">
+
+        <img
+            src="./snack.jpeg"
+            alt="Snack"
+            style="
+                width:100%;
+                height:180px;
+                object-fit:cover;
+                display:block;
+            "
+        >
+
+        <div class="menu-info">
+
+            <h3>
+                Snack
+            </h3>
+
+            <p class="price">
+                Rp2.000
+            </p>
+
+            <div class="stock available">
+                ✓ Tersedia — Stok: 8
+            </div>
+
+            <div class="menu-buttons">
+
+                <button
+                    class="order-button"
+                    onclick="pesanSekarang('Snack',2000,8)"
+                >
+                    🛍️ Pesan Sekarang
+                </button>
+
+                <button
+                    class="cart-button"
+                    onclick="addToCart('Snack',2000,8)"
+                >
+                    🛒 Tambah ke Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
 
 </div>
-
+```
 
 </section>
 
-<!-- ============================
+<!-- ==================================================
      KERANJANG
-============================ -->
+================================================== -->
 
 <section
-class="cart-section"
-id="keranjang"
+    class="cart-section"
+    id="keranjang"
 >
 
+```
 <div class="section-title">
 
-<h2>
-🛒 Keranjang Pesanan
-</h2>
+    <h2>
+        🛒 Keranjang Pesanan
+    </h2>
 
-<p>
-Tambahkan beberapa menu ke keranjang
-sebelum melakukan pemesanan
-</p>
+    <p>
+        Tambahkan beberapa menu ke keranjang
+        sebelum melakukan pemesanan
+    </p>
 
 </div>
+
 
 <div class="cart-box">
 
-<div class="cart-count">
+    <div class="cart-count">
 
-Jumlah Item:
+        Jumlah Item:
 
-<span id="cartCount">
-0
-</span>
+        <span id="cartCount">
+            0
+        </span>
 
-</div>
+    </div>
 
 
-<div id="cartItems">
+    <div id="cartItems">
 
-<div class="empty-cart">
+        <div class="empty-cart">
 
-🛒 Keranjang masih kosong.
+            🛒 Keranjang masih kosong.
 
-<br><br>
+            <br><br>
 
-Silakan pilih menu
-yang ingin kamu pesan.
+            Silakan pilih menu
+            yang ingin kamu pesan.
 
-</div>
+        </div>
 
-</div>
+    </div>
 
-<div class="cart-total">
 
-<span>
-Total Pesanan
-</span>
+    <div class="cart-total">
 
-<span
-class="cart-total-price"
-id="cartTotal"
+        <span>
+            Total Pesanan
+        </span>
 
->
+        <span
+            class="cart-total-price"
+            id="cartTotal"
+        >
+            Rp0
+        </span>
 
-Rp0
-
-</span>
-
-</div>
+    </div>
 
 </div>
+```
 
 </section>
 
-<!-- ============================
+<!-- ==================================================
      FORM PEMESANAN
-============================ -->
+================================================== -->
 
 <section
-class="order-section"
-id="pesanan"
+    class="order-section"
+    id="pesanan"
 >
 
+```
 <div class="section-title">
 
-<h2>
-🛒 Form Pemesanan
-</h2>
+    <h2>
+        🛒 Form Pemesanan
+    </h2>
 
-<p>
-Isi nama pemesan dan detail pesanan
-</p>
+    <p>
+        Isi nama pemesan dan detail pesanan
+    </p>
 
 </div>
+
 
 <div class="order-box">
 
-<form id="orderForm">
+    <form id="orderForm">
 
-<div class="form-group">
+        <div class="form-group">
 
-<label>
-Nama Pemesan
-</label>
+            <label>
+                Nama Pemesan
+            </label>
 
-<input
-type="text"
-id="customerName"
-placeholder="Masukkan nama kamu"
-required
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Masukkan nama kamu"
+                required
+            >
 
->
+        </div>
 
-</div>
 
-<div class="form-group">
+        <div class="form-group">
 
-<label>
-Catatan Pesanan
-</label>
+            <label>
+                Catatan Pesanan
+            </label>
 
-<textarea
-id="orderNote"
-placeholder="Contoh: Kopinya sedikit gula, mie tidak pedas..."
-></textarea>
+            <textarea
+                id="orderNote"
+                placeholder="Contoh: Kopinya sedikit gula, mie tidak pedas..."
+            ></textarea>
 
-</div>
+        </div>
 
-<button
-type="button"
-id="whatsappButton"
-class="whatsapp-button"
-onclick="pesanViaWhatsApp()"
 
->
+        <button
+            type="button"
+            id="whatsappButton"
+            class="whatsapp-button"
+            onclick="pesanViaWhatsApp()"
+        >
+            💬 Pesan Sekarang via WhatsApp Admin
+        </button>
 
-💬 Pesan Sekarang via WhatsApp Admin
 
-</button>
+        <div
+            class="notification"
+            id="notification"
+        ></div>
 
-<div
-class="notification"
-id="notification"
->
-
-</div>
-
-</form>
+    </form>
 
 </div>
+```
 
 </section>
 
-<!-- ============================
+<!-- ==================================================
      PESANAN SAYA
-============================ -->
+================================================== -->
 
 <section
-class="my-order-section"
-id="my-order"
+    class="my-order-section"
+    id="my-order"
 >
 
+```
 <div class="section-title">
 
-<h2>
-📋 Pesanan Saya
-</h2>
+    <h2>
+        📋 Pesanan Saya
+    </h2>
 
-<p>
-Pesanan yang sudah kamu buat akan tampil di sini
-</p>
+    <p>
+        Pesanan yang sudah kamu buat akan tampil di sini
+    </p>
 
 </div>
+
 
 <div class="my-order-box">
 
-<div
-class="order-status"
-id="orderStatus"
->
+    <div
+        class="order-status"
+        id="orderStatus"
+    >
+        🟡 Belum ada pesanan aktif
+    </div>
 
-🟡 Belum ada pesanan aktif
+
+    <div class="customer-info">
+
+        <p>
+
+            <strong>
+                Nomor Pesanan:
+            </strong>
+
+            <span id="orderNumber">
+                -
+            </span>
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Nama Pemesan:
+            </strong>
+
+            <span id="displayCustomerName">
+                Belum ada nama
+            </span>
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Waktu Pemesanan:
+            </strong>
+
+            <span id="orderTime">
+                -
+            </span>
+
+        </p>
+
+    </div>
+
+
+    <h3>
+        Detail Pesanan
+    </h3>
+
+
+    <div
+        class="order-list"
+        id="orderList"
+    >
+
+        <div class="empty-cart">
+            Belum ada pesanan.
+        </div>
+
+    </div>
+
+
+    <div class="total">
+
+        <span>
+            Total Pembayaran
+        </span>
+
+        <span
+            class="total-price"
+            id="orderTotal"
+        >
+            Rp0
+        </span>
+
+    </div>
 
 </div>
-
-<div class="customer-info">
-
-<p>
-
-<strong>
-Nomor Pesanan:
-</strong>
-
-<span id="orderNumber">
--
-</span>
-
-</p>
-
-<p>
-
-<strong>
-Nama Pemesan:
-</strong>
-
-<span id="displayCustomerName">
-Belum ada nama
-</span>
-
-</p>
-
-<p>
-
-<strong>
-Waktu Pemesanan:
-</strong>
-
-<span id="orderTime">
--
-</span>
-
-</p>
-
-</div>
-
-<h3>
-Detail Pesanan
-</h3>
-
-<div
-class="order-list"
-id="orderList"
->
-
-<div class="empty-cart">
-
-Belum ada pesanan.
-
-</div>
-
-</div>
-
-<div class="total">
-
-<span>
-Total Pembayaran
-</span>
-
-<span
-class="total-price"
-id="orderTotal"
-
->
-
-Rp0
-
-</span>
-
-</div>
-
-</div>
+```
 
 </section>
 
-<!-- ============================
+<!-- ==================================================
      TRACKING
-============================ -->
+================================================== -->
 
 <section id="tracking">
 
+```
 <div class="section-title">
 
-<h2>
-🚚 Lacak Pesanan
-</h2>
+    <h2>
+        🚚 Lacak Pesanan
+    </h2>
 
-<p>
-Pantau proses pesanan kamu sampai selesai
-</p>
+    <p>
+        Pantau proses pesanan kamu sampai selesai
+    </p>
 
 </div>
+
 
 <div class="tracking-box">
 
-<div class="order-number">
+    <div class="order-number">
 
-Nomor Pesanan:
+        Nomor Pesanan:
 
-<strong id="trackingNumber">
+        <strong id="trackingNumber">
+            Belum ada pesanan
+        </strong>
 
-Belum ada pesanan
+    </div>
 
-</strong>
+
+    <div class="timeline">
+
+        <div class="timeline-item active">
+
+            <h4>
+                ✓ Pesanan Diterima
+            </h4>
+
+            <p>
+                Pesanan kamu sudah diterima.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item active">
+
+            <h4>
+                ✓ Sedang Diproses & Packing
+            </h4>
+
+            <p>
+                Pesanan sedang disiapkan
+                oleh pihak Warkop.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h4>
+                Siap Diantar
+            </h4>
+
+            <p>
+                Pesanan siap untuk diantar
+                kepada pelanggan.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h4>
+                Pesanan Selesai
+            </h4>
+
+            <p>
+                Pesanan telah diterima pelanggan.
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
-
-<div class="timeline">
-
-<div class="timeline-item active">
-
-<h4>
-✓ Pesanan Diterima
-</h4>
-
-<p>
-Pesanan kamu sudah diterima.
-</p>
-
-</div>
-
-<div class="timeline-item active">
-
-<h4>
-✓ Sedang Diproses & Packing
-</h4>
-
-<p>
-Pesanan sedang disiapkan
-oleh pihak Warkop.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h4>
-Siap Diantar
-</h4>
-
-<p>
-Pesanan siap untuk diantar
-kepada pelanggan.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<h4>
-Pesanan Selesai
-</h4>
-
-<p>
-Pesanan telah diterima pelanggan.
-</p>
-
-</div>
-
-</div>
-
-</div>
+```
 
 </section>
 
-<!-- ============================
-     TENTANG WEBSITE
-============================ -->
+<!-- ==================================================
+     TENTANG
+================================================== -->
 
 <section
-class="about-section"
-id="tentang"
+    class="about-section"
+    id="tentang"
 >
 
+```
 <div class="section-title">
 
-<h2>
-ℹ️ Tentang Website
-</h2>
+    <h2>
+        ℹ️ Tentang Website
+    </h2>
 
-<p>
-Mengenal Warkop Online
-</p>
+    <p>
+        Mengenal Warkop Online
+    </p>
 
 </div>
+
 
 <div class="about-box">
 
-<h3>
-☕ Tentang Warkop Online
-</h3>
+    <h3>
+        ☕ Tentang Warkop Online
+    </h3>
 
-<p>
 
-Warkop Online merupakan sebuah website
-pemesanan makanan dan minuman yang dibuat
-untuk memudahkan pelanggan dalam melihat
-daftar menu, mengetahui ketersediaan stok,
-serta melakukan pemesanan secara online.
+    <p>
 
-</p>
+        Warkop Online merupakan sebuah website
+        pemesanan makanan dan minuman yang dibuat
+        untuk memudahkan pelanggan dalam melihat
+        daftar menu, mengetahui ketersediaan stok,
+        serta melakukan pemesanan secara online.
 
-<p>
+    </p>
 
-Pelanggan dapat memilih makanan dan minuman
-kemudian menambahkannya ke dalam keranjang.
-Setelah itu pelanggan dapat melakukan pemesanan
-melalui WhatsApp Admin dengan mudah.
 
-</p>
+    <p>
 
-<div class="about-features">
+        Pelanggan dapat memilih makanan dan minuman
+        kemudian menambahkannya ke dalam keranjang.
+        Setelah itu pelanggan dapat melakukan pemesanan
+        melalui WhatsApp Admin dengan mudah.
 
-<div class="feature">
+    </p>
 
-<div style="font-size: 35px;">
-📋
+
+    <div class="about-features">
+
+
+        <div class="feature">
+
+            <div style="font-size:35px;">
+                📋
+            </div>
+
+            <h4>
+                Daftar Menu
+            </h4>
+
+            <p>
+                Melihat berbagai makanan dan minuman
+                yang tersedia.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div style="font-size:35px;">
+                🛒
+            </div>
+
+            <h4>
+                Keranjang
+            </h4>
+
+            <p>
+                Menyimpan beberapa menu sebelum
+                melakukan pemesanan.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div style="font-size:35px;">
+                💬
+            </div>
+
+            <h4>
+                WhatsApp
+            </h4>
+
+            <p>
+                Pesanan dapat dikirim langsung
+                kepada Admin melalui WhatsApp.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div style="font-size:35px;">
+                🚚
+            </div>
+
+            <h4>
+                Tracking
+            </h4>
+
+            <p>
+                Memantau proses pesanan hingga selesai.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div style="font-size:35px;">
+                🕐
+            </div>
+
+            <h4>
+                Jam Operasional
+            </h4>
+
+            <p>
+                Setiap Hari<br>
+                08:00 - 22:00 WIB
+            </p>
+
+            <div
+                id="statusWarkop"
+                style="
+                    margin-top:10px;
+                    font-weight:bold;
+                "
+            ></div>
+
+        </div>
+
+
+    </div>
+
 </div>
-
-<h4>
-Daftar Menu
-</h4>
-
-<p>
-Melihat berbagai makanan dan minuman
-yang tersedia.
-</p>
-
-</div>
-
-<div class="feature">
-
-<div style="font-size: 35px;">
-🛒
-</div>
-
-<h4>
-Keranjang
-</h4>
-
-<p>
-Menyimpan beberapa menu sebelum
-melakukan pemesanan.
-</p>
-
-</div>
-
-<div class="feature">
-
-<div style="font-size: 35px;">
-💬
-</div>
-
-<h4>
-WhatsApp
-</h4>
-
-<p>
-Pesanan dapat dikirim langsung
-kepada Admin melalui WhatsApp.
-</p>
-
-</div>
-
-<div class="feature">
-
-<div style="font-size: 35px;">
-🚚
-</div>
-
-<h4>
-Tracking
-</h4>
-
-<p>
-Memantau proses pesanan hingga selesai.
-</p>
-
-</div>
-
-<div class="feature">
-
-<div style="font-size: 35px;">
-🕐
-</div>
-
-<h4>
-Jam Operasional
-</h4>
-
-<p>
-Setiap Hari<br>
-
-08:00 - 22:00 WIB
-
-</p>
-
-<div
-id="statusWarkop"
-style="
-margin-top: 10px;
-font-weight: bold;
-"
->
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+```
 
 </section>
 
-<!-- ============================
+<!-- ==================================================
      FOOTER
-============================ -->
+================================================== -->
 
 <footer>
 
+```
 <p>
-☕ <strong>
-Warkop Online
-</strong>
+    ☕ <strong>
+        Warkop Online
+    </strong>
 </p>
 
 <p>
-Nikmati kopi dan makanan favoritmu
-dengan mudah.
+    Nikmati kopi dan makanan favoritmu
+    dengan mudah.
 </p>
 
 <p>
-© 2026 Warkop Online
+    © 2026 Warkop Online
 </p>
+```
 
 </footer>
 
-<!-- ============================
+<!-- ==================================================
      JAVASCRIPT
-============================ -->
+================================================== -->
 
 <script>
 
-
-/* ============================
+/* ==================================================
    DATA KERANJANG
-============================ */
+================================================== */
 
 let cart = [];
 
 
-
-/* ============================
+/* ==================================================
    NOMOR WHATSAPP ADMIN
-============================ */
+================================================== */
 
-/*
-GANTI NOMOR INI DENGAN
-NOMOR WHATSAPP ADMIN KAMU.
-
-Contoh:
-081234567890
-
-Menjadi:
-6281234567890
-
-*/
-
-let adminNumber =
-"6281234567890";
+let adminNumber = "6281234567890";
 
 
-
-/* ============================
+/* ==================================================
    FORMAT RUPIAH
-============================ */
+================================================== */
 
 function formatRupiah(number) {
 
@@ -3401,57 +2522,38 @@ function formatRupiah(number) {
 }
 
 
-
-/* ============================
+/* ==================================================
    CEK JAM OPERASIONAL
-============================ */
+================================================== */
 
 function cekJamOperasional() {
 
+    const sekarang = new Date();
 
-    const sekarang =
-        new Date();
+    const waktuWIB = new Date(
+        sekarang.toLocaleString(
+            "en-US",
+            {
+                timeZone: "Asia/Jakarta"
+            }
+        )
+    );
 
+    const jam = waktuWIB.getHours();
 
-    const waktuWIB =
-        new Date(
-
-            sekarang.toLocaleString(
-                "en-US",
-                {
-                    timeZone:
-                    "Asia/Jakarta"
-                }
-            )
-
-        );
-
-
-    const jam =
-        waktuWIB.getHours();
-
-
-    const menit =
-        waktuWIB.getMinutes();
-
+    const menit = waktuWIB.getMinutes();
 
     const waktuSekarang =
         jam * 60 + menit;
 
+    const jamBuka = 8 * 60;
 
-    const jamBuka =
-        8 * 60;
-
-
-    const jamTutup =
-        22 * 60;
-
+    const jamTutup = 22 * 60;
 
     const status =
         document.getElementById(
             "statusWarkop"
         );
-
 
     const whatsappButton =
         document.getElementById(
@@ -3459,67 +2561,47 @@ function cekJamOperasional() {
         );
 
 
-
     if (
-
-        waktuSekarang >= jamBuka
-
-        &&
-
+        waktuSekarang >= jamBuka &&
         waktuSekarang < jamTutup
-
     ) {
-
 
         status.innerHTML =
             "🟢 Warkop sedang BUKA";
 
-
         status.style.color =
             "#2e7d32";
-
 
         whatsappButton.disabled =
             false;
 
-
         whatsappButton.style.backgroundColor =
             "#25D366";
-
 
         whatsappButton.style.cursor =
             "pointer";
 
-
         whatsappButton.innerText =
             "💬 Pesan Sekarang via WhatsApp Admin";
 
-
     }
 
-
     else {
-
 
         status.innerHTML =
             "🔴 Warkop sedang TUTUP";
 
-
         status.style.color =
             "#c62828";
-
 
         whatsappButton.disabled =
             true;
 
-
         whatsappButton.style.backgroundColor =
             "#bdbdbd";
 
-
         whatsappButton.style.cursor =
             "not-allowed";
-
 
         whatsappButton.innerText =
             "🔴 Warkop Sedang Tutup";
@@ -3529,85 +2611,46 @@ function cekJamOperasional() {
 }
 
 
-
-/* ============================
-   JALANKAN CEK JAM
-============================ */
-
 cekJamOperasional();
 
-
 setInterval(
-
     cekJamOperasional,
-
     60000
-
 );
 
 
-
-/* ============================
+/* ==================================================
    CEK WARKOP BUKA
-============================ */
+================================================== */
 
 function isWarkopBuka() {
 
+    const sekarang = new Date();
 
-    const sekarang =
-        new Date();
-
-
-    const waktuWIB =
-        new Date(
-
-            sekarang.toLocaleString(
-
-                "en-US",
-
-                {
-
-                    timeZone:
-                    "Asia/Jakarta"
-
-                }
-
-            )
-
-        );
-
+    const waktuWIB = new Date(
+        sekarang.toLocaleString(
+            "en-US",
+            {
+                timeZone: "Asia/Jakarta"
+            }
+        )
+    );
 
     const totalMenit =
-
-        waktuWIB.getHours()
-        *
-        60
-
-        +
-
+        waktuWIB.getHours() * 60 +
         waktuWIB.getMinutes();
 
-
-
     return (
-
-        totalMenit >=
-        8 * 60
-
-        &&
-
-        totalMenit <
-        22 * 60
-
+        totalMenit >= 8 * 60 &&
+        totalMenit < 22 * 60
     );
 
 }
 
 
-
-/* ============================
+/* ==================================================
    TAMBAH KE KERANJANG
-============================ */
+================================================== */
 
 function addToCart(
     name,
@@ -3615,10 +2658,7 @@ function addToCart(
     stock
 ) {
 
-
-    if (
-        !isWarkopBuka()
-    ) {
+    if (!isWarkopBuka()) {
 
         alert(
             "🔴 Maaf, Warkop sedang tutup.\n\nJam operasional:\n08:00 - 22:00 WIB"
@@ -3629,88 +2669,59 @@ function addToCart(
     }
 
 
-
     let existingItem =
         cart.find(
-
             item =>
             item.name === name
-
         );
 
 
-
-    if (
-        existingItem
-    ) {
-
+    if (existingItem) {
 
         if (
-
-            existingItem.quantity
-            <
+            existingItem.quantity <
             stock
-
         ) {
 
-
             existingItem.quantity++;
-
 
         }
 
         else {
 
-
             alert(
-
                 "Maaf, stok " +
-
                 name +
-
                 " hanya tersedia " +
-
                 stock +
-
                 " item."
-
             );
 
         }
-
 
     }
 
     else {
 
-
         cart.push({
 
-            name:
-            name,
+            name: name,
 
-            price:
-            price,
+            price: price,
 
-            quantity:
-            1,
+            quantity: 1,
 
-            stock:
-            stock
+            stock: stock
 
         });
 
 
         alert(
-
             name +
-
             " berhasil ditambahkan ke keranjang!"
-
         );
 
     }
-
 
 
     updateCart();
@@ -3718,72 +2729,49 @@ function addToCart(
 }
 
 
-
-/* ============================
-   TAMBAH POP ICE
-============================ */
+/* ==================================================
+   POP ICE
+================================================== */
 
 function addPopIce() {
 
-
     let flavor =
-
         document
         .getElementById(
             "popIceFlavor"
         )
         .value;
 
-
-
     addToCart(
-
         "Pop Ice " + flavor,
-
         7000,
-
         10
-
     );
 
 }
 
-
-
-/* ============================
-   PESAN POP ICE
-============================ */
 
 function pesanPopIce() {
 
-
     let flavor =
-
         document
         .getElementById(
             "popIceFlavor"
         )
         .value;
 
-
-
     pesanSekarang(
-
         "Pop Ice " + flavor,
-
         7000,
-
         10
-
     );
 
 }
 
 
-
-/* ============================
+/* ==================================================
    PESAN SEKARANG
-============================ */
+================================================== */
 
 function pesanSekarang(
     name,
@@ -3791,10 +2779,7 @@ function pesanSekarang(
     stock
 ) {
 
-
-    if (
-        !isWarkopBuka()
-    ) {
+    if (!isWarkopBuka()) {
 
         alert(
             "🔴 Maaf, Warkop sedang tutup.\n\nJam operasional:\n08:00 - 22:00 WIB"
@@ -3817,34 +2802,27 @@ function pesanSekarang(
             "pesanan"
         )
         .scrollIntoView({
-
-            behavior:
-            "smooth"
-
+            behavior: "smooth"
         });
 
 }
 
 
-
-/* ============================
+/* ==================================================
    UPDATE KERANJANG
-============================ */
+================================================== */
 
 function updateCart() {
-
 
     const cartItems =
         document.getElementById(
             "cartItems"
         );
 
-
     const cartCount =
         document.getElementById(
             "cartCount"
         );
-
 
     const cartTotal =
         document.getElementById(
@@ -3852,128 +2830,95 @@ function updateCart() {
         );
 
 
-
-    if (
-        cart.length === 0
-    ) {
-
+    if (cart.length === 0) {
 
         cartItems.innerHTML = `
 
-        <div class="empty-cart">
+            <div class="empty-cart">
 
-        🛒 Keranjang masih kosong.
+                🛒 Keranjang masih kosong.
 
-        <br><br>
+                <br><br>
 
-        Silakan pilih menu
-        yang ingin kamu pesan.
+                Silakan pilih menu
+                yang ingin kamu pesan.
 
-        </div>
+            </div>
 
         `;
 
-
-        cartCount.innerText =
-            "0";
-
+        cartCount.innerText = "0";
 
         cartTotal.innerText =
             formatRupiah(0);
-
 
         return;
 
     }
 
 
+    let total = 0;
 
-    let total =
-        0;
+    let totalItems = 0;
 
-
-    let totalItems =
-        0;
-
-
-    cartItems.innerHTML =
-        "";
-
+    cartItems.innerHTML = "";
 
 
     cart.forEach(
-
         function(item, index) {
 
-
             let subtotal =
-
-                item.price
-                *
+                item.price *
                 item.quantity;
 
-
-
-            total +=
-                subtotal;
-
-
+            total += subtotal;
 
             totalItems +=
                 item.quantity;
 
 
-
             cartItems.innerHTML += `
 
-            <div class="cart-item">
+                <div class="cart-item">
 
-            <div class="cart-item-info">
+                    <div class="cart-item-info">
 
-            <strong>
-            ${item.name}
-            </strong>
+                        <strong>
+                            ${item.name}
+                        </strong>
 
-            <span>
+                        <span>
 
-            ${item.quantity}
-            x
-            ${formatRupiah(item.price)}
+                            ${item.quantity}
+                            x
+                            ${formatRupiah(item.price)}
 
-            =
+                            =
 
-            ${formatRupiah(subtotal)}
+                            ${formatRupiah(subtotal)}
 
-            </span>
+                        </span>
 
-            </div>
+                    </div>
 
 
-            <button
+                    <button
+                        class="remove-button"
+                        onclick="removeFromCart(${index})"
+                    >
+                        Hapus
+                    </button>
 
-            class="remove-button"
-
-            onclick="removeFromCart(${index})"
-
-            >
-
-            Hapus
-
-            </button>
-
-            </div>
+                </div>
 
             `;
 
         }
-
     );
-
 
 
     cartCount.innerText =
         totalItems;
-
 
     cartTotal.innerText =
         formatRupiah(total);
@@ -3981,56 +2926,40 @@ function updateCart() {
 }
 
 
-
-/* ============================
-   HAPUS DARI KERANJANG
-============================ */
+/* ==================================================
+   HAPUS KERANJANG
+================================================== */
 
 function removeFromCart(index) {
 
-
     cart.splice(
-
         index,
-
         1
-
     );
-
 
     updateCart();
 
 }
 
 
-
-/* ============================
+/* ==================================================
    PESAN VIA WHATSAPP
-============================ */
+================================================== */
 
 function pesanViaWhatsApp() {
 
-
-    if (
-        !isWarkopBuka()
-    ) {
-
+    if (!isWarkopBuka()) {
 
         alert(
-
             "🔴 Maaf, Warkop sedang tutup.\n\nJam operasional:\n08:00 - 22:00 WIB"
-
         );
-
 
         return;
 
     }
 
 
-
     const name =
-
         document
         .getElementById(
             "customerName"
@@ -4039,9 +2968,7 @@ function pesanViaWhatsApp() {
         .trim();
 
 
-
     const note =
-
         document
         .getElementById(
             "orderNote"
@@ -4050,132 +2977,86 @@ function pesanViaWhatsApp() {
         .trim();
 
 
-
-    if (
-        name === ""
-    ) {
-
+    if (name === "") {
 
         alert(
-
             "Silakan masukkan nama pemesan terlebih dahulu."
-
         );
-
 
         return;
 
     }
 
 
-
-    if (
-        cart.length === 0
-    ) {
-
+    if (cart.length === 0) {
 
         alert(
-
             "Keranjang masih kosong. Silakan pilih menu terlebih dahulu."
-
         );
-
 
         return;
 
     }
-
 
 
     let orderNumber =
-
-        "WK-"
-
-        +
-
+        "WK-" +
         Date.now();
 
 
-
-    let now =
-        new Date();
-
-
+    let now = new Date();
 
     let time =
-
         now.toLocaleString(
             "id-ID"
         );
 
 
-
-    let total =
-        0;
-
+    let total = 0;
 
 
     const orderList =
-
-        document
-        .getElementById(
+        document.getElementById(
             "orderList"
         );
 
-
-
-    orderList.innerHTML =
-        "";
-
+    orderList.innerHTML = "";
 
 
     cart.forEach(
-
         function(item) {
 
-
             let subtotal =
-
-                item.price
-                *
+                item.price *
                 item.quantity;
 
-
-
-            total +=
-                subtotal;
-
+            total += subtotal;
 
 
             orderList.innerHTML += `
 
-            <div class="order-item">
+                <div class="order-item">
 
-            <span>
+                    <span>
 
-            ${item.name}
+                        ${item.name}
+                        ×
+                        ${item.quantity}
 
-            ×
+                    </span>
 
-            ${item.quantity}
+                    <strong>
 
-            </span>
+                        ${formatRupiah(subtotal)}
 
+                    </strong>
 
-            <strong>
-
-            ${formatRupiah(subtotal)}
-
-            </strong>
-
-            </div>
+                </div>
 
             `;
 
         }
-
     );
-
 
 
     document
@@ -4186,14 +3067,12 @@ function pesanViaWhatsApp() {
         name;
 
 
-
     document
         .getElementById(
             "orderNumber"
         )
         .innerText =
         orderNumber;
-
 
 
     document
@@ -4204,7 +3083,6 @@ function pesanViaWhatsApp() {
         orderNumber;
 
 
-
     document
         .getElementById(
             "orderTime"
@@ -4213,17 +3091,12 @@ function pesanViaWhatsApp() {
         time;
 
 
-
     document
         .getElementById(
             "orderTotal"
         )
         .innerText =
-
-        formatRupiah(
-            total
-        );
-
+        formatRupiah(total);
 
 
     document
@@ -4231,405 +3104,230 @@ function pesanViaWhatsApp() {
             "orderStatus"
         )
         .innerText =
-
         "📦 Pesanan berhasil dibuat dan sedang dalam proses packing.";
 
 
-
     const notification =
-
-        document
-        .getElementById(
+        document.getElementById(
             "notification"
         );
-
 
 
     notification.style.display =
         "block";
 
 
-
     notification.innerHTML = `
 
-    ✓ <strong>
-    Pesanan Berhasil Dibuat!
-    </strong>
+        ✓ <strong>
+        Pesanan Berhasil Dibuat!
+        </strong>
 
-    <br><br>
+        <br><br>
 
-    Halo <strong>
-    ${name}
-    </strong>,
+        Halo <strong>
+        ${name}
+        </strong>,
 
-    pesanan kamu sudah berhasil dibuat.
+        pesanan kamu sudah berhasil dibuat.
 
-    <br><br>
+        <br><br>
 
-    📦 Pesanan sedang dalam proses packing.
+        📦 Pesanan sedang dalam proses packing.
 
-    <br><br>
+        <br><br>
 
-    Nomor Pesanan:
+        Nomor Pesanan:
 
-    <strong>
-    ${orderNumber}
-    </strong>
+        <strong>
+        ${orderNumber}
+        </strong>
 
     `;
 
 
-
     let message =
-
         "Halo Admin Warkop Online,%0A%0A";
 
 
     message +=
-
         "Saya ingin memesan:%0A%0A";
 
 
-
     cart.forEach(
-
         function(item) {
 
-
             message +=
-
-                "• "
-
-                +
-
-                item.name
-
-                +
-
-                " x "
-
-                +
-
-                item.quantity
-
-                +
-
-                " = "
-
-                +
-
+                "• " +
+                item.name +
+                " x " +
+                item.quantity +
+                " = " +
                 formatRupiah(
-
-                    item.price
-                    *
+                    item.price *
                     item.quantity
-
-                )
-
-                +
-
+                ) +
                 "%0A";
 
         }
-
     );
 
 
+    message += "%0A";
+
 
     message +=
+        "Nama Pemesan: " +
+        name +
         "%0A";
 
 
     message +=
-
-        "Nama Pemesan: "
-
-        +
-
-        name
-
-        +
-
+        "Nomor Pesanan: " +
+        orderNumber +
         "%0A";
 
 
     message +=
-
-        "Nomor Pesanan: "
-
-        +
-
-        orderNumber
-
-        +
-
+        "Total: " +
+        formatRupiah(total) +
         "%0A";
 
 
-    message +=
-
-        "Total: "
-
-        +
-
-        formatRupiah(
-            total
-        )
-
-        +
-
-        "%0A";
-
-
-
-    if (
-        note !== ""
-    ) {
-
+    if (note !== "") {
 
         message +=
-
-            "Catatan: "
-
-            +
-
-            note
-
-            +
-
+            "Catatan: " +
+            note +
             "%0A";
 
     }
 
 
-
     message +=
-
         "%0AMohon dikonfirmasi ya Admin. Terima kasih 😊";
 
 
-
     let whatsappURL =
-
-        "https://wa.me/"
-
-        +
-
-        adminNumber
-
-        +
-
-        "?text="
-
-        +
-
+        "https://wa.me/" +
+        adminNumber +
+        "?text=" +
         message;
 
 
-
     window.open(
-
         whatsappURL,
-
         "_blank"
-
     );
-
 
 
     cart = [];
 
-
     updateCart();
 
 
-
     setTimeout(
-
         function() {
 
-
             document
-
                 .getElementById(
                     "my-order"
                 )
-
                 .scrollIntoView({
-
-                    behavior:
-                    "smooth"
-
+                    behavior: "smooth"
                 });
 
-
         },
-
         700
-
     );
 
 }
 
 
-
-/* ============================
+/* ==================================================
    UPDATE NAMA PEMESAN
-============================ */
+================================================== */
 
 document
-
     .getElementById(
         "customerName"
     )
-
     .addEventListener(
-
         "input",
-
         function() {
 
-
             let name =
-
                 this.value.trim();
 
 
-
-            if (
-                name === ""
-            ) {
-
+            if (name === "") {
 
                 document
-
                     .getElementById(
                         "displayCustomerName"
                     )
-
                     .innerText =
-
                     "Belum ada nama";
-
 
             }
 
             else {
 
-
                 document
-
                     .getElementById(
                         "displayCustomerName"
                     )
-
                     .innerText =
-
                     name;
 
             }
 
         }
-
     );
-/* ============================
+
+
+/* ==================================================
    MENU MOBILE
-============================ */
+   INI BAGIAN YANG SUDAH DIPERBAIKI
+================================================== */
 
-function openMenu() {
+const menuToggle =
+    document.getElementById(
+        "menuToggle"
+    );
 
-    document
-        .getElementById("mobileNav")
-        .classList
-        .add("active");
+const mobileNav =
+    document.getElementById(
+        "mobileNav"
+    );
 
+const closeMenuButton =
+    document.getElementById(
+        "closeMenu"
+    );
 
-    document
-        .getElementById("menuOverlay")
-        .classList
-        .add("active");
-
-}
-
-
-function closeMenu() {
-
-    document
-        .getElementById("mobileNav")
-        .classList
-        .remove("active");
-
-
-    document
-        .getElementById("menuOverlay")
-        .classList
-        .remove("active");
-
-}
-<script>
-
-    /* JavaScript lama kamu */
-
-    let cart = [];
-
-    function formatRupiah(number) {
-        // ...
-    }
-
-    // JavaScript lainnya...
-
-
-    /* ============================
-       MENU MOBILE
-    ============================ */
-
-    function openMenu() {
-
-        document
-            .getElementById("mobileNav")
-            .classList
-            .add("active");
-
-        document
-            .getElementById("menuOverlay")
-            .classList
-            .add("active");
-
-    }
-
-
-    function closeMenu() {
-
-        document
-            .getElementById("mobileNav")
-            .classList
-            .remove("active");
-
-        document
-            .getElementById("menuOverlay")
-            .classList
-            .remove("active");
-
-    }
-/* =========================================
-   MENU TARIK MOBILE
-========================================= */
+const menuOverlay =
+    document.getElementById(
+        "menuOverlay"
+    );
 
 
 /* BUKA MENU */
 
 function openMenu() {
 
-    document
-        .getElementById("mobileNav")
-        .classList
-        .add("active");
+    mobileNav.classList.add(
+        "active"
+    );
 
+    menuOverlay.classList.add(
+        "active"
+    );
 
-    document
-        .getElementById("menuOverlay")
-        .classList
-        .add("active");
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
 
 }
 
@@ -4638,19 +3336,115 @@ function openMenu() {
 
 function closeMenu() {
 
-    document
-        .getElementById("mobileNav")
-        .classList
-        .remove("active");
+    mobileNav.classList.remove(
+        "active"
+    );
 
+    menuOverlay.classList.remove(
+        "active"
+    );
 
-    document
-        .getElementById("menuOverlay")
-        .classList
-        .remove("active");
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
 
 }
-</script>
+
+
+/* KLIK TITIK TIGA */
+
+menuToggle.addEventListener(
+    "click",
+    function() {
+
+        if (
+            mobileNav.classList.contains(
+                "active"
+            )
+        ) {
+
+            closeMenu();
+
+        }
+
+        else {
+
+            openMenu();
+
+        }
+
+    }
+);
+
+
+/* KLIK TOMBOL X */
+
+closeMenuButton.addEventListener(
+    "click",
+    function() {
+
+        closeMenu();
+
+    }
+);
+
+
+/* KLIK AREA GELAP */
+
+menuOverlay.addEventListener(
+    "click",
+    function() {
+
+        closeMenu();
+
+    }
+);
+
+
+/* KLIK LINK MENU */
+
+const menuLinks =
+    mobileNav.querySelectorAll(
+        "a"
+    );
+
+
+menuLinks.forEach(
+    function(link) {
+
+        link.addEventListener(
+            "click",
+            function() {
+
+                closeMenu();
+
+            }
+        );
+
+    }
+);
+
+
+/* ==================================================
+   TOMBOL ESC UNTUK MENUTUP MENU
+================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeMenu();
+
+        }
+
+    }
+);
+
 </script>
 
 </body>
