@@ -1394,30 +1394,437 @@ footer p {
     }
 
 }
+   /* =========================================
+   MENU TARIK MOBILE - VERSI FINAL
+========================================= */
+
+
+/* =========================================
+   TOMBOL MENU ☰
+========================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+}
+
+
+/* =========================================
+   TOMBOL CLOSE ✕
+========================================= */
+
+.close-menu {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    padding: 5px 10px;
+
+}
+
+
+/* =========================================
+   HEADER MENU
+========================================= */
+
+.menu-header {
+
+    display: none;
+
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.menu-overlay {
+
+    display: none;
+
+}
+
+
+/* =========================================
+   RESPONSIVE HP
+========================================= */
+
+@media (max-width: 768px) {
+
+
+    /* -------------------------------------
+       HEADER HP
+    ------------------------------------- */
+
+    header {
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 18px 5%;
+
+    }
+
+
+    /* -------------------------------------
+       LOGO
+    ------------------------------------- */
+
+    .logo {
+
+        font-size: 21px;
+
+    }
+
+
+    /* -------------------------------------
+       TOMBOL ☰
+    ------------------------------------- */
+
+    .menu-toggle {
+
+        display: block;
+
+        position: relative;
+
+        z-index: 2000;
+
+    }
+
+
+    /* -------------------------------------
+       MENU SLIDE DARI KANAN
+    ------------------------------------- */
+
+    header nav#mobileNav {
+
+        position: fixed;
+
+        top: 70px;
+
+        right: -300px;
+
+        width: 280px;
+
+        height: calc(100vh - 70px);
+
+        background:
+
+        linear-gradient(
+
+            180deg,
+
+            #3e2723,
+
+            #6d4c41
+
+        );
+
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 20px;
+
+        gap: 5px;
+
+        z-index: 3000;
+
+        transition:
+
+        right 0.4s ease;
+
+        margin: 0;
+
+        box-shadow:
+
+        -5px 0 20px
+
+        rgba(0,0,0,0.3);
+
+        border-radius:
+
+        0 0 0 15px;
+
+    }
+
+
+    /* -------------------------------------
+       MENU TERBUKA
+    ------------------------------------- */
+
+    header nav#mobileNav.active {
+
+        right: 0;
+
+    }
+
+
+    /* -------------------------------------
+       BAGIAN ATAS MENU
+    ------------------------------------- */
+
+    header nav#mobileNav .menu-header {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        color: white;
+
+        font-size: 18px;
+
+        font-weight: bold;
+
+        padding-bottom: 15px;
+
+        margin-bottom: 10px;
+
+        border-bottom:
+
+        1px solid
+
+        rgba(255,255,255,0.2);
+
+    }
+
+
+    /* -------------------------------------
+       TOMBOL ✕ DI DALAM MENU
+    ------------------------------------- */
+
+    header nav#mobileNav .close-menu {
+
+        background: none;
+
+        border: none;
+
+        color: white;
+
+        font-size: 25px;
+
+        cursor: pointer;
+
+        padding:
+
+        5px 10px;
+
+        margin-left: 20px;
+
+    }
+
+
+    /* -------------------------------------
+       LINK MENU
+    ------------------------------------- */
+
+    header nav#mobileNav a {
+
+        display: block;
+
+        color: white;
+
+        text-decoration: none;
+
+        margin: 0;
+
+        padding: 15px;
+
+        border-radius: 10px;
+
+        font-size: 16px;
+
+        transition:
+
+        background 0.3s,
+
+        padding-left 0.3s;
+
+    }
+
+
+    /* -------------------------------------
+       EFEK HOVER MENU
+    ------------------------------------- */
+
+    header nav#mobileNav a:hover {
+
+        background:
+
+        rgba(255,255,255,0.12);
+
+        padding-left: 22px;
+
+        color: #ffcc80;
+
+    }
+
+
+    /* -------------------------------------
+       OVERLAY GELAP
+    ------------------------------------- */
+
+    .menu-overlay {
+
+        display: block;
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100vh;
+
+        background:
+
+        rgba(0,0,0,0.5);
+
+        z-index: 2500;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition:
+
+        opacity 0.4s ease;
+
+    }
+
+
+    /* -------------------------------------
+       OVERLAY AKTIF
+    ------------------------------------- */
+
+    .menu-overlay.active {
+
+        opacity: 1;
+
+        visibility: visible;
+
+    }
+
+
+    /* -------------------------------------
+       HERO HP
+    ------------------------------------- */
+
+    .hero-content h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 16px;
+
+    }
+
+
+    /* -------------------------------------
+       SECTION HP
+    ------------------------------------- */
+
+    section {
+
+        padding:
+
+        45px 5%;
+
+    }
+
+
+    /* -------------------------------------
+       BOX HP
+    ------------------------------------- */
+
+    .order-box,
+
+    .tracking-box,
+
+    .my-order-box,
+
+    .cart-box {
+
+        padding: 25px;
+
+    }
+
+
+    /* -------------------------------------
+       ITEM HP
+    ------------------------------------- */
+
+    .order-item,
+
+    .cart-item {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        align-items: flex-start;
+
+    }
+
+}
 </style>
 
 </head>
 
 <body>
-
 <header>
 
+    <!-- LOGO -->
     <div class="logo">
         ☕ Warkop<span>Online</span>
     </div>
 
-    <!-- TOMBOL MENU ☰ -->
+
+    <!-- TOMBOL ☰ -->
     <button
         class="menu-toggle"
         onclick="openMenu()"
+        aria-label="Buka Menu"
     >
         ☰
     </button>
 
-    <!-- MENU NAVIGASI -->
+
+    <!-- NAVIGASI -->
     <nav id="mobileNav">
 
-        <!-- TOMBOL TUTUP ✕ -->
+        <!-- JUDUL MENU DAN TOMBOL ✕ -->
         <div class="menu-header">
 
             <span>
@@ -1427,39 +1834,67 @@ footer p {
             <button
                 class="close-menu"
                 onclick="closeMenu()"
+                aria-label="Tutup Menu"
             >
                 ✕
             </button>
 
         </div>
 
-        <a href="#menu" onclick="closeMenu()">
+
+        <!-- LINK MENU -->
+
+        <a
+            href="#menu"
+            onclick="closeMenu()"
+        >
             ☕ Daftar Menu
         </a>
 
-        <a href="#keranjang" onclick="closeMenu()">
+
+        <a
+            href="#keranjang"
+            onclick="closeMenu()"
+        >
             🛒 Keranjang
         </a>
 
-        <a href="#pesanan" onclick="closeMenu()">
+
+        <a
+            href="#pesanan"
+            onclick="closeMenu()"
+        >
             🛍️ Pemesanan
         </a>
 
-        <a href="#my-order" onclick="closeMenu()">
+
+        <a
+            href="#my-order"
+            onclick="closeMenu()"
+        >
             📋 Pesanan Saya
         </a>
 
-        <a href="#tracking" onclick="closeMenu()">
+
+        <a
+            href="#tracking"
+            onclick="closeMenu()"
+        >
             🚚 Tracking
         </a>
 
-        <a href="#tentang" onclick="closeMenu()">
+
+        <a
+            href="#tentang"
+            onclick="closeMenu()"
+        >
             ℹ️ Tentang
         </a>
 
     </nav>
 
-    <!-- AREA GELAP DI LUAR MENU -->
+
+    <!-- BACKGROUND GELAP -->
     <div
         class="menu-overlay"
         id="menuOverlay"
@@ -4176,7 +4611,45 @@ function closeMenu() {
             .remove("active");
 
     }
+/* =========================================
+   MENU TARIK MOBILE
+========================================= */
 
+
+/* BUKA MENU */
+
+function openMenu() {
+
+    document
+        .getElementById("mobileNav")
+        .classList
+        .add("active");
+
+
+    document
+        .getElementById("menuOverlay")
+        .classList
+        .add("active");
+
+}
+
+
+/* TUTUP MENU */
+
+function closeMenu() {
+
+    document
+        .getElementById("mobileNav")
+        .classList
+        .remove("active");
+
+
+    document
+        .getElementById("menuOverlay")
+        .classList
+        .remove("active");
+
+}
 </script>
 </script>
 
